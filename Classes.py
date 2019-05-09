@@ -123,8 +123,37 @@ icecream.add_flavors('vanilla', 'chocolate', 'cookies and cream', 'strawberry')
 icecream.describe_restaurant()
 
 
+# creating a separate class to hold admin privileges
+
+
+class Privileges():
+    """A simple class to hold the admin-specific capabilities"""
+    def __init__(self):
+        self.privileges = ['can add post' , 'can delete post', 'can ban user']
+
+    def show_privileges(self):
+        """A new function to display admin-specific privileges"""
+        print("\nThis user has the additional capabilities: ")
+        for value in self.privileges:
+            print(value.title())
+
 # creating another child class
+
+
 class Admin(User):
     """A child class of the parent User class"""
 
-    def __init__(self, )
+    def __init__(self, first_name, last_name, age, job):
+        """
+        Initializes attributes of the parent class
+        Then initializes attributes of the Admin class
+        """
+        super().__init__(first_name, last_name, age, job)
+        self.privileges = Privileges()
+
+
+admin1 = Admin('joe', 'pickert', 22, 'student')
+admin1.describe_user()
+admin1.privileges.show_privileges()
+
+
