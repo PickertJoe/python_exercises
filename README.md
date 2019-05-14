@@ -11,8 +11,8 @@ for brushing up on my coding fundamentals, only this time in Python.
 Stay tuned for future updates and exciting projects as I continue to build my skillset in Python!
 
 Other considerations:
-* All exercises are meant to be run in Python
+* All exercises are meant to be run in Python 3
 * All code was written using SublimeText
-* All files contain several exerises directly pertinent to a different chapter of Sweigart's book
+* All files contain several exercises directly pertinent to a different chapter of Sweigart's book
 * The "text_files" directory contains a few larger text documents used for the data file and analysis exercises
 
