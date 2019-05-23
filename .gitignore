@@ -1,3 +1,4 @@
 .DS_Store
 py
 favorite_number.json
+__pycache__/
