@@ -2,3 +2,4 @@
 py
 favorite_number.json
 __pycache__/
+*.svg
