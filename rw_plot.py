@@ -23,3 +23,7 @@ plt.scatter(rw.x_location, rw.y_location, c=step_list, cmap=plt.cm.Purples,
 plt.scatter(0, 0, color='green', s=30)
 plt.scatter(rw.x_location[-1], rw.y_location[-1], color='red', s=30)
 plt.show()
+
+# Plotting the random walk as a line rather than a scatter plot
+plt.plot(rw.x_location, rw.y_location, linewidth=1)
+plt.show()

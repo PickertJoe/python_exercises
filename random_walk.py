@@ -12,19 +12,22 @@ class Random_Walk():
         self.y_location = [0]
         self.steps = steps
 
+    def get_step(self):
+        """A method to generate the direction of size for each step, reducing size of fill_walk"""
+        s_dir = choice([1, -1])
+        s_dist = choice([0, 1, 2, 3, 4])
+        step = s_dir * s_dist
+        return step
+
     def fill_walk(self):
         """Generating the movement behavior of the random walk"""
 
         while len(self.x_location) < self.steps:
             # Movement behavior in the x direction
-            x_dir = choice([1, -1])
-            x_dist = choice([0, 1, 2, 3, 4])
-            x_step = x_dir * x_dist
+            x_step = self.get_step()
 
             # Movement behavior in the y direction
-            y_dir = choice([1, -1])
-            y_dist = choice([0, 1, 2, 3, 4])
-            y_step = y_dist * y_dir
+            y_step = self.get_step()
 
             # Omitting steps that move nowehere
             if x_step == 0 and y_step == 0:
