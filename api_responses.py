@@ -3,10 +3,17 @@
 import requests
 
 # Storing a response from an API call
-url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
-r = requests.get(url)
-print("Status code:", r.status_code)
 
+
+def read_API():
+    """A function to make and store the API call to GitHub"""
+    url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
+    r = requests.get(url)
+    print("Status code:", r.status_code)
+    return r
+
+
+r = read_API()
 # Storing the API response in a variable
 response_dict = r.json()
 print("Total respositories:", response_dict['total_count'])
