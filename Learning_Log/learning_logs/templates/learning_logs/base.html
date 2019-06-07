@@ -1,0 +1,9 @@
+<!--The base HTML template for the Learning Log website-->
+
+<p>
+    <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
+    <a href="{% url 'learning_logs:topics' %}">Topics</a>
+</p>
+
+{% block content %}{% endblock content%}
+

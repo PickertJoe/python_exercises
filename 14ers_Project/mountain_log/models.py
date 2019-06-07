@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 
-class Topic(models.Model):
-    """Information for a topic the user is learning about"""
+class Mountain(models.Model):
+    """Information for a mountain the user would like to describe"""
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
 
@@ -14,8 +14,8 @@ class Topic(models.Model):
 
 
 class Entry(models.Model):
-    """Adding specific information being learned about a topic"""
-    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    """Adding specific information about the mountain in question"""
+    topic = models.ForeignKey(Mountain, on_delete=models.CASCADE)
     text = models.TextField()
     elevation = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
