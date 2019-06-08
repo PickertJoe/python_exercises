@@ -1,2 +1,8 @@
 <!-- Base template for the 14ers database website -->
 
+<p>
+    <a href="{% url 'mountain_log:index' %}">14ers Database</a> -
+    <a href="{% url 'mountain_log:mountains' %}">Mountains</a>
+</p>
+
+{% block content %}{% endblock content%}

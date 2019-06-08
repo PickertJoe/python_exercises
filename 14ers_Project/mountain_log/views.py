@@ -18,7 +18,7 @@ def mountains(request):
 
 def mountain(request, topic_id):
     """Shows all the entries for a single topic"""
-    topic = Mountain.objects.get(id=topic_id)
-    entries = topic.entry_set.order_by('-date_added')
+    mountain = Mountain.objects.get(id=topic_id)
+    entries = mountain.entry_set.order_by('-date_added')
     context = {'mountain': mountain, 'entries': entries}
-    return render(request, 'learning_log/mountain.html', context)
+    return render(request, 'mountain_log/mountain.html', context)

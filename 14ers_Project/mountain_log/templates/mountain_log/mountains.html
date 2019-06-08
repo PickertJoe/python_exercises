@@ -1,0 +1,19 @@
+<!--HTML template for the webpage listing all 14ers entered by the user-->
+
+{% extends 'mountain_log/base.html' %}
+
+{% block content %}
+
+    <p>Mountains</p>
+
+    <ul>
+        {% for mountain in mountains %}
+          <li>
+            <a href="{% url 'mountain_log:mountain' mountain.id %}">{{mountain}}</a>
+          </li>
+        {% empty %}
+          <li>No mountains have been added yet.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}

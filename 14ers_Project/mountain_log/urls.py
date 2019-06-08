@@ -12,5 +12,5 @@ urlpatterns = [
     path('mountains/', views.mountains, name='mountains'),
 
     # Detail page for a single topic
-    path('mountains/<int:mountain_id>', views.mountain, name='mountains'),
+    path('mountains/<int:mountain_id>', views.mountain, name='mountain'),
 ]
