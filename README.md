@@ -8,6 +8,8 @@ excellent guidebook *Python Crash Course* (PCC).
 Although I was introduced to programming through C++, this book has served as an excellent resource
 for brushing up on my coding fundamentals, only this time in Python.
 
+**FILE DESCRIPTIONS**
+
 * "14ers_Project" : a Django-based web app with minimal front end development; designed
 alongside the exercises in PCC's web development project.
 
